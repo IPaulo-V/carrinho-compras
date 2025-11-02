@@ -54,11 +54,23 @@ input[type="number"] {
   grid-template-columns: 1.375fr 1fr;
   column-gap: 5rem;
 
-  background: white url('./assets/oculos.png') no-repeat bottom left;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: left bottom -40px;
   background-size: auto 40%;
 
   position: relative;
-  background-position: left bottom -40px;
+}
+
+.conteudo-principal {
+  background-image: url('./assets/oculos.png');
+}
+
+.conteudo-principal:has(#produto option[value*="Fone de ouvido"]:checked) {
+  background-image: url('./assets/fone-de-ouvido.png');
+}
+.conteudo-principal:has(#produto option[value*="Celular"]:checked) {
+  background-image: url('./assets/celular.png');
 }
 
 .grafismo-azul {
